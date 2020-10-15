@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "checkJs": false,
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react"
+  },
+  "rules": {
+    "ordered-imports": false,
+    "object-litrel-sort-keys": false,
+    "interface-name": false,
+    "member-ordering": false,
+    "no-console": false
+  },
+  "include": ["src"]
+}
