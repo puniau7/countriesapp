@@ -3,10 +3,10 @@ import { Home, Button, Input } from './Styles';
 import CountryInd from './Country';
 import asc from '../assets/sort-ascending.png';
 import dsc from '../assets/sort-descending.png';
-
+type FilteredDataType = any;
 function HomePage() {
-  const [data, setData] = useState([]);
-  const [filteredData, setFilteredData] = useState([]);
+  const [data, setData] = useState<FilteredDataType>([]);
+  const [filteredData, setFilteredData] = useState<FilteredDataType>([]);
   const [searchTerm, setSearchTerm] = useState('');
 
   useEffect(() => {
@@ -29,12 +29,12 @@ function HomePage() {
     setFilteredData(results);
   }, [searchTerm]);
 
-  const inputChangeHandler = event => {
-    setSearchTerm(event.target.value);
+  const inputChangeHandler = (event: any) => {
+    setSearchTerm(event!.target!.value);
   };
 
   // sort data in asc dsc order
-  const sortedData = (allData, type) => {
+  const sortedData = (allData: any, type: string) => {
     let dataToSort = allData;
     let sorted = [];
     if (type === 'asc') {
@@ -65,9 +65,9 @@ function HomePage() {
       </div>
       <Home>
         {dataToRender &&
-          dataToRender.map(el => (
+          dataToRender.map((el: any) => (
             <>
-              <CountryInd countryData={el}> </CountryInd>
+              <CountryInd {...el}> </CountryInd>
             </>
           ))}
       </Home>

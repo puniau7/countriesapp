@@ -5,12 +5,10 @@ import { mount } from 'enzyme';
 describe('ActionColumn component', () => {
   function getDefaultProps() {
     return {
-      countryData: {
-        name: 'India',
-        capital: 'New Delhi',
-        languages: [{ name: 'English' }, { name: 'Hindi' }, { name: 'Urdu' }],
-        currencies: [{ name: 'rupees', symbol: 'R' }]
-      }
+      name: 'India',
+      capital: 'New Delhi',
+      languages: [{ name: 'English' }, { name: 'Hindi' }, { name: 'Urdu' }],
+      currencies: [{ name: 'rupees', symbol: 'R' }]
     };
   }
 
